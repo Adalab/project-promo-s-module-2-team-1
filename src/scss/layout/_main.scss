@@ -1,14 +1,14 @@
 .main {
   background-color: $background-color;
   display: flex;
- flex-direction:column;
-  justify-content: center; 
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 
   &--section1__title {
     color: $dull-orange;
     font-size: 19.2px;
-     height: 24px;
+    height: 24px;
     font-family: $font-merry;
     font-weight: bold;
     padding-top: 40px;
@@ -26,27 +26,26 @@
     justify-content: space-around;
     align-items: center;
     margin: 0 28px 17.8px 28px;
-    border:solid 2px $dull-orange;
+    border: solid 2px $dull-orange;
     height: 74px;
-    border-radius:4px;
+    border-radius: 4px;
 
     &__div {
-        display:flex;
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-        &__icon {
-            color: $dull-orange;
-            height: 26px;
-            width: 32px;
-            font-size: 22.4px;
-        }
-        &__text {
-            color:$gunmetal;
-            font-size: 13px;
-            font-family: $font-open;
-            
-        }
+      &__icon {
+        color: $dull-orange;
+        height: 26px;
+        width: 32px;
+        font-size: 22.4px;
+      }
+      &__text {
+        color: $gunmetal;
+        font-size: 13px;
+        font-family: $font-open;
+      }
     }
   }
 
@@ -55,23 +54,18 @@
     justify-content: center;
     margin: 38px 75px 50px 65px;
 
-    &__button{
-    color: $white-two;
-    text-transform: uppercase;
-    font-family: $font-open;
-    font-weight: 600;
-    font-size: 16px;
-    background-color: $dirty-blue;
-    border: none;
-    border-radius: 21px;
-    width: 129px;
-    height: 42px;
-    padding: 10px 20px;
+    &__button {
+      color: $white-two;
+      text-transform: uppercase;
+      font-family: $font-open;
+      font-weight: 600;
+      font-size: 16px;
+      background-color: $dirty-blue;
+      border: none;
+      border-radius: 21px;
+      width: 129px;
+      height: 42px;
+      padding: 10px 20px;
     }
   }
 }
-
-
-
-
-
