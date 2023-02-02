@@ -1,4 +1,4 @@
-.header {
+.landing--header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -6,8 +6,21 @@
   height: 27.8vh;
   background-color: $background-color;
 }
-.header--logo {
+.landing--header__logo {
   width: 100%;
   padding-left: 35px;
   padding-right: 35px;
+}
+.create-card--header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 19.5vh;
+  background-color: $white-two;
+}
+.create-card--header__logo {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 79px;
 }
