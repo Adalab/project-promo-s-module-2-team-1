@@ -1,1 +1,13 @@
-
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 27.8vh;
+  background-color: $background-color;
+}
+.header--logo {
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+}
