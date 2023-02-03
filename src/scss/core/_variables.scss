@@ -5,21 +5,9 @@ $defaultFontSize: 16;
 
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
-
-// fonts
-// $font-main: 'Roboto', sans-serif;
-
-// colors
-// $color-text: #000;
-// $color-title: #000;
-// $color-background: #999;
-
-// $font-merry: "Merriweather";
-// $font-montserrat: "Montserrat";
-// $font-open: "Open Sans, sans-serif";
-$font-merry: "Merriweather", sans-serif;
-$font-montserrat: "Montserrat", sans-serif;
-$font-open: "Open Sans", sans-serif;
+$font-merry: 'Merriweather', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
+$font-open: 'Open Sans', sans-serif;
 
 $dull-orange: #e17334;
 $dark-green: #114e4e;
@@ -40,5 +28,5 @@ $dried-blood: #420101;
 $silver: #bfcdd0;
 $rusty-red: #bd1010;
 $gunmetal: #54585a;
-//$pale-grey: #54585a;
+$pale-grey: #dde9ed;
 $faded-orange: #eab052;
