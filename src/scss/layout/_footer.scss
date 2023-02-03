@@ -1,2 +1,28 @@
-.footer {
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 50px 20px;
+  border: solid 1px $white-three;
+  background-color: $white-two;
+}
+.footerText {
+  opacity: 0.5;
+  width: 100%;
+  font-family: $font-open;
+  font-size: 14px;
+  line-height: 1.43;
+  color: $brownish-grey;
+  text-align: center;
+}
+.logo {
+  width: 103px;
+  height: 40px;
+  margin: 12px 47px 0 48px;
+}
+@media all and (min-width: 768px) {
+  footer {
+    display: none;
+  }
 }
