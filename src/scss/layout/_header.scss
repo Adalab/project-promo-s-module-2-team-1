@@ -5,22 +5,45 @@
   align-items: center;
   height: 27.8vh;
   background-color: $background-color;
-}
-.landing--header__logo {
-  width: 100%;
-  padding-left: 35px;
-  padding-right: 35px;
+  @media (min-width: 768px) {
+    height: 45.8vh;
+  }
+  @media (min-width: 1200px) {
+  }
+  &__logo {
+    width: 100%;
+    height: 63px;
+    padding-left: 35px;
+    padding-right: 35px;
+    @media (min-width: 768px) {
+      height: 105px;
+      padding-left: 155px;
+      padding-right: 154px;
+    }
+    @media (min-width: 1200px) {
+    }
+  }
 }
 .create-card--header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 19.5vh;
+  height: 10.9vh;
   background-color: $white-two;
-}
-.create-card--header__logo {
-  width: 100%;
-  padding-left: 40px;
-  padding-right: 79px;
+  @media (min-width: 768px) {
+    height: 10.75vh;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  @media (min-width: 1200px) {
+    height: 10.83vh;
+  }
+
+  &__logo {
+    height: 50px;
+    @media (min-width: 768px) {
+      padding-left: 40px;
+    }
+  }
 }
