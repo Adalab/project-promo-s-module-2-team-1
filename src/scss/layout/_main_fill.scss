@@ -1,0 +1,68 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form--label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 19px;
+  font-family: $font-open;
+  font-size: 1.4rem;
+  line-height: 20px;
+  color: $dark-green;
+  width: 100%;
+}
+.form--input {
+  font-family: $font-open;
+  font-size: 1.4rem;
+  padding: 3px 9px 7px 9px;
+  margin-bottom: 20px;
+  height: 20px;
+  color: $pinkish-grey;
+  border: solid 1px $hospital-green;
+}
+.form--label__image {
+  display: inline-block;
+
+  padding-left: 20px;
+  padding-right: 19px;
+  font-family: $font-open;
+  font-size: 1.4rem;
+  line-height: 20px;
+  background-color: orange;
+  color: white;
+  width: 20%;
+}
+.fill--header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  &__title {
+    padding-bottom: 25px;
+
+    &__icon {
+      color: $dull-orange;
+      height: 26px;
+      width: 32px;
+      font-size: 22.4px;
+    }
+
+    &__text {
+      color: $gunmetal;
+      font-size: 18px;
+      font-family: $font-open;
+      font-weight: 600;
+      padding-left: 5px;
+    }
+  }
+  &__scroll {
+    transform: rotate(180deg);
+    padding-top: 25px;
+    color: $gunmetal;
+  }
+}

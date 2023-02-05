@@ -1,0 +1,95 @@
+<section class="fill">
+  <div class="fill--header">
+    <div class="fill--header__title">
+      <span class="fill--header__title__icon">
+        <i class="fa-regular fa-keyboard"></i>
+      </span>
+      <span class="fill--header__title__text">RELLENA</span>
+    </div>
+    <img
+      class="fill--header__scroll"
+      src="././assets/images/ico-scroll-down.svg"
+      alt="imagen scroll down"
+    />
+  </div>
+  <!--Form-->
+  <form class="form" action="https://formspree.io/f/myyakzyb" method="post">
+    <!-- name -->
+    <label class="form--label" for="name">
+      Nombre Completo
+      <input
+        class="form--input"
+        id="name"
+        type="text"
+        name="name"
+        placeholder="Ej: Sally Jill"
+        required
+      />
+    </label>
+    <!-- puesto -->
+    <label class="form--label" for="puesto">
+      Puesto
+      <input
+        class="form--input"
+        id="puesto"
+        type="text"
+        name="puesto"
+        placeholder="Ej: Front-end unicorn"
+        required
+      />
+    </label>
+    <!-- Imagen -->
+    <!-- <label class="form--label__image" for="image"> Añadir imagen </label> -->
+    <!--Email-->
+    <label class="form--label" for="email">
+      Email
+      <input
+        class="form--input form--input--email"
+        id="email"
+        type="email"
+        name="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        placeholder="Ej:sally-hill@gmail.com"
+        required
+      />
+    </label>
+
+    <!--Telephone-->
+    <label class="form--label" for="telephone">
+      Teléfono
+      <input
+        class="form--input"
+        id="telephone"
+        type="tel"
+        name="telephone"
+        placeholder="Ej: 555-55-55-55"
+      />
+    </label>
+    <!--Linkelin-->
+    <label class="form--label" for="linkelin">
+      Linkelin
+      <input
+        class="form--input"
+        id="linkelin"
+        type="url"
+        name="linkelin"
+        pattern="linkedin.com/in/[a-z0-9._%+-]"
+        placeholder="Ej: linkedin.com/in/sally.hill"
+        required
+      />
+    </label>
+    <!--Github-->
+    <label class="form--label" for="github">
+      Github
+      <input
+        class="form--input"
+        id="github"
+        type="url"
+        name="github"
+        pattern="@[a-z0-9.-]"
+        placeholder="Ej: @sally-hill"
+        required
+      />
+    </label>
+  </form>
+</section>
