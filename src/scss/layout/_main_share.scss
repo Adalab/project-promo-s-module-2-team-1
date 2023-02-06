@@ -1,22 +1,21 @@
 .share-container {
-    display:flex ;
-    border-top: 0.1rem $white-three solid;
-    margin: 20px 20px 25px 20px;
-    
+  display: flex;
+  border-top: 0.1rem $white-three solid;
+  margin: 20px 20px 25px 20px;
 
-    &__div {
-        flex-direction: row;
-        &__title {
-        font-family: $font-open;
-        font-size: 18px;
-        color: $gunmetal;
-        text-transform: uppercase;
-        font-weight: 600;
-        padding-left: 5px;
-        }
+  &__div {
+    flex-direction: row;
+    &__title {
+      font-family: $font-open;
+      font-size: 18px;
+      color: $gunmetal;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding-left: 5px;
     }
+  }
 }
 .fa-solid {
-    color: $dull-orange;
-    font-size: 22px;
+  color: $dull-orange;
+  font-size: 22px;
 }
