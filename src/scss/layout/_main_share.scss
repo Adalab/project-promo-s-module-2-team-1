@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .share-container {
   display: flex;
   border-top: 0.1rem $white-three solid;
@@ -12,10 +13,120 @@
       text-transform: uppercase;
       font-weight: 600;
       padding-left: 5px;
+=======
+
+.share {
+  border-bottom: 1px solid $white-three;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 19px;
+padding-bottom: 50px;
+}
+
+.share--header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__title {
+    padding-bottom: 25px;
+
+    &__icon {
+      color: $dull-orange;
+      height: 26px;
+      width: 32px;
+      font-size: 22px;
+    }
+    &__text {
+      color: $gunmetal;
+      font-size: 18px;
+      font-family: $font-open;
+      font-weight: 600;
+      padding-left: 5px;
+      text-transform: uppercase;
+    }
+    }
+    .sectionshare__arrow {
+    font-size: 18px;
+    color: $gunmetal;
+  }
+}
+
+.share--button {
+    display:flex;
+    justify-content: center;
+
+    &__create{
+        width: 199px;
+        height: 50px;
+        background-color: $dull-orange;
+        color: $background-color; 
+        border:none;
+        border-radius: 12px;
+        box-shadow: 0 1px 6px 0 var(--black-32);
+        font-family: $font-open;
+        font-size: 18px;
+        text-transform: uppercase;
+        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+        margin:auto;
+    }
+    .fa-regular {
+        margin-right: 8px;
+        font-size: 22px;
+        color: $background-color;
+>>>>>>> 0df177bdf04408f90e6fd961c86a9ffdd8e97a7a
     }
   }
 }
+<<<<<<< HEAD
 .fa-solid {
   color: $dull-orange;
   font-size: 22px;
 }
+=======
+
+.share--button2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-top: 1px solid $white-three;
+ // border-bottom: 1px solid $white-three;
+  margin-top: 30px;
+  
+  &__text {
+    font-family: $font-open;
+    font-size: 18px;
+    font-weight: 600;
+    color: $gunmetal;
+    text-align: center;
+    margin-top: 15px;
+  }
+  &__nav {
+    font-family: $font-open;
+    font-size: 12px;
+    font-weight: 600;
+    color: $dull-orange;
+    text-align: center;
+    text-decoration: none;
+    line-height: 3;
+    margin-left: -11px;
+    margin-right: -11px;
+      }
+  &__twitter {
+    width: 181px;
+    height: 30px;
+    margin: 10px 33px -10px 45px;
+    padding: 3px 9px 6px 10.5px;
+    border-radius: 3px;
+    border: none;
+    background-color: $azure;
+    color: $background-color;
+    font-family: $font-open;
+    font-size: 14px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  }
+  .fa-brands {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+}
+>>>>>>> 0df177bdf04408f90e6fd961c86a9ffdd8e97a7a
