@@ -6,3 +6,5 @@ const desingContent = document.querySelector('.js-design-content');
 const fillContent = document.querySelector('.js-fill-content');
 const shareContent = document.querySelector('.js-share-content');
 const fillRotateScroll = document.querySelector('.js-fill-rotate-scroll');
+const designRotateScroll = document.querySelector('.js-designRotateScroll');
+const shareRotateScroll = document.querySelector('.js-share-rotate-scroll');
