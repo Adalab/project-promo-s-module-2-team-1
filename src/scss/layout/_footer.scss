@@ -7,7 +7,11 @@
   border: solid 1px $white-three;
   background-color: $white-two;
   // position: fixed;
+  height: 20vh;
   width: 100%;
+  @media (min-width: 768px) {
+    height: 6vh;
+  }
 }
 .footerText {
   opacity: 0.5;

@@ -9,10 +9,13 @@
   }
 }
 .header--scroll__create-card {
-  transform: rotate(180deg);
-  padding-top: 25px;
+  // padding-top: 25px;
   color: $gunmetal;
   font-size: 18px;
+}
+.header--scroll__create-card__rotate {
+  transform: rotate(180deg);
+  padding-top: 25px;
 }
 .collapsed {
   display: none;
