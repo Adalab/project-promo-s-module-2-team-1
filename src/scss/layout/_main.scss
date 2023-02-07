@@ -27,6 +27,7 @@
       font-size: 24px;
       height: 31px;
       padding-top: 15px;
+      transform: translateY(-20px);
     }
   }
   &--section1__paragraph {
@@ -42,6 +43,7 @@
       padding-top: 10px;
       width: 331px;
       height: 48px;
+      transform: translateY(-20px);
     }
   }
   &--section2 {
@@ -60,6 +62,7 @@
       height: 86px;
       margin: 40px auto;
       padding: 15px 20px 10px;
+      transform: translateY(-20px);
     }
 
     &__div {
@@ -96,13 +99,17 @@
     justify-content: center;
     margin: 38px 75px 50px 65px;
 
+    @media all and (min-width: 768px) {
+      transform: translateY(40px);
+    }
+
     &__button {
       color: white;
       text-transform: uppercase;
-      // font-family: $font-open;
+      font-family: $font-open;
       font-weight: 600;
       font-size: 16px;
-      background-color: blue;
+      background-color: $dirty-blue;
       border: none;
       border-radius: 21px;
       width: 129px;
