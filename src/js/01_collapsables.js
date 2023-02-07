@@ -13,6 +13,7 @@ fillLegend.addEventListener('click', (event) =>{
   desingContent.classList.add('collapsed');
   shareContent.classList.add('collapsed');
   fillContent.classList.remove('collapsed');
+  rotateScroll.classList.remove('header--scroll__create-card__rotate');
 })
 shareLegend.addEventListener('click', (event) =>{
   event.preventDefault();
