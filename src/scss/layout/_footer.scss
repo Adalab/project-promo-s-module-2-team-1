@@ -4,13 +4,12 @@
   justify-content: center;
   align-items: center;
   padding: 18px 50px 20px;
-  border: solid 1px $white-three;
+  border-top: solid 1px $white-three;
   background-color: $white-two;
-  // position: fixed;
   height: 20vh;
   width: 100%;
   @media (min-width: 768px) {
-    height: 6vh;
+    height: 10vh;
   }
 }
 .footerText {

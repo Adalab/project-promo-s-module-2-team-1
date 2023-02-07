@@ -6,7 +6,7 @@
   text-align: center;
   height: 52.2vh;
   @media (min-width: 768px) {
-    height: 48.2vh;
+    height: 50vh;
   }
   &--section1 {
     display: flex;
@@ -26,6 +26,7 @@
     @media all and (min-width: 768px) {
       font-size: 24px;
       height: 31px;
+      padding-top: 15px;
     }
   }
   &--section1__paragraph {
@@ -38,7 +39,7 @@
     @media all and (min-width: 768px) {
       font-size: 16px;
       margin: auto;
-      padding-top: 25px;
+      padding-top: 10px;
       width: 331px;
       height: 48px;
     }
@@ -48,10 +49,11 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 0 28px 17.8px 28px;
-    border: solid 1.6px rgba(225, 115, 52, 0.21);
+    margin: 20px 28px 17.8px 28px;
+    border: solid 2px #f1dacc;
     height: 74px;
     border-radius: 4px;
+    padding: 15px;
 
     @media all and (min-width: 768px) {
       width: 325px;
