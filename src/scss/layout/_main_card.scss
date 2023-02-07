@@ -1,4 +1,5 @@
-.main-card{
+
+.main_card{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -9,15 +10,19 @@
     padding-bottom: 10px;
 }
 .reset{
-    width: 75px;
+    width: 85px;
     height: 30px;
     border: solid 1px white;
     border-radius: 15px;
     background-color: #bfcdd0;
     margin-top: 35px;
     margin-bottom: 20px;
+    color: $gunmetal;
+    font-size: 13px;
+    font-family: $font-open;
+    text-transform: capitalize;
 }
-.profile-card{
+.profileCard{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -28,29 +33,40 @@
     border-radius: 2px;
     box-shadow: 0 1px 10px;
     margin-bottom: 40px;
+    padding-left:18px;
 }
-.profile-name{
+.profileName{
     font-size: 18px;
     font-weight: bold;
-    padding-left: 15px;
+    
+    font-family:$font-montserrat;
+    color: $dark-green;
 }
-.profile-role{
-    padding-left: 15px;
+.profileRole{
+    
+    font-family: $font-montserrat;
+    color: $gunmetal;
 }
-.profile-photo{
+.profilePhoto{
     width: 100%;
     height: 200px;
 }
-.profile-links{
+.profileLinks{
     display: flex;
     justify-content: space-around;
     align-items: baseline;
     padding-right: 60px;
     padding-left: 10px;
+    color: $dark-green;
 
 }
 .icon{
-    border: solid 2px green;
+    border: solid 2px $hospital-green;
     border-radius: 50px;
     padding: 5px 7px;
+    font-size: 20px;
+    color: $dark-green;
 }
+
+
+
