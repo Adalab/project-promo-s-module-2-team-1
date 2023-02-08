@@ -3,7 +3,7 @@
   margin-bottom: 10px;
   margin-left: 30px;
   margin-right: 20px;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
   @media (min-width: 768px) {
     margin-left: 0px;
     margin-right: 0px;
@@ -60,7 +60,7 @@
   cursor: pointer;
 
   &__title {
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 
     &__icon {
       color: $dull-orange;
