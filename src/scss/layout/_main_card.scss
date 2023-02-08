@@ -56,7 +56,28 @@
 .profilePhoto{
     width: 100%;
     height: 200px;
+    background-image: url("/src/images/default.png");
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+    padding-bottom: 20px;
    
+}
+.mainCardButton{
+    color: white;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    background-color: $dull-orange;
+    border: none;
+    border-radius: 21px;
+    width: 122px;
+    height: 35px;
+    text-decoration: none;
+    cursor: pointer;
+    padding-top:10px;
+    text-align: center;
+    
 }
 .profileLinks{
     display: flex;
