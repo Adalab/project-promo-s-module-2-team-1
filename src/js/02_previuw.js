@@ -6,7 +6,8 @@ function fillPreviuw(event)
 {
 event.preventDefault(); 
 //Definimos variables para las clases de la preview
-const  namePreviuw = document.querySelector('.nameSurname'); 
+const  namePreviuw = document.querySelector('.nameSurname');
+
 const  jobPreviuw = document.querySelector('.profileRole');
     const  telephonePreviuw = document.querySelector('.telephone');
     const  emailPreviuw = document.querySelector('.mail');
@@ -17,7 +18,6 @@ const  jobPreviuw = document.querySelector('.profileRole');
     switch(event.target.name){
     case 'name':
         namePreviuw.innerHTML=event.target.value;
-        prueba.innerHTML=namePreviuw;
         break;
     case 'puesto':
         jobPreviuw.innerHTML=event.target.value;
