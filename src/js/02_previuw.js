@@ -1,18 +1,18 @@
 'use strict'
 const formFill = document.querySelector('.js-fill-content');
-// formFill.addEventListener('keyup',fillPreviuw);
-formFill.addEventListener('change',fillPreviuw);
+formFill.addEventListener('keyup',fillPreviuw);
+// formFill.addEventListener('change',fillPreviuw);
 function fillPreviuw(event)
 {
 event.preventDefault(); 
 //Definimos variables para las clases de la preview
-const  namePreviuw = document.querySelector('.nameSurname');
+const  namePreviuw = document.querySelector('.js-card-nameSurname');
 
-const  jobPreviuw = document.querySelector('.profileRole');
-    const  telephonePreviuw = document.querySelector('.telephone');
-    const  emailPreviuw = document.querySelector('.mail');
-    const  githubPreviuw = document.querySelector('.github');
-    const  linkelinPreviuw = document.querySelector('.linkedin');
+const  jobPreviuw = document.querySelector('.js-card-profileRole');
+    const  telephonePreviuw = document.querySelector('.js-card-telephone');
+    const  emailPreviuw = document.querySelector('.js-card-mail');
+    const  githubPreviuw = document.querySelector('.js-card-github');
+    const  linkelinPreviuw = document.querySelector('.js-card-linkedin');
     
     //Previuw con los valores del formulario
     switch(event.target.name){

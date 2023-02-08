@@ -10,14 +10,6 @@
   }
 }
 
-.form {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  @media (min-width: 768px) {
-    width: 369px;
-  }
-}
 .form--label {
   display: flex;
   flex-direction: column;
@@ -35,6 +27,7 @@
   margin-bottom: 15px;
   margin-top: 7px;
   height: 20px;
+  // width: 100%;
   color: $pinkish-grey;
   border: solid 1px $hospital-green;
 }
