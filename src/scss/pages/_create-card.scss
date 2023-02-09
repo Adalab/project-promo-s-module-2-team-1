@@ -6,12 +6,17 @@
     background-color: $background-color;
     padding-left: 40px;
     padding-right: 40px;
-    height: 79vh;
+    // height: 852px;
+    // height: 79vh;
+  }
+  @media (min-width: 1200px) {
+    height: 1000px;
   }
 }
 .form--create-card {
   @media (min-width: 768px) {
     width: 70vw;
+    padding-top: 10px;
     padding-right: 20px;
     display: flex;
     flex-direction: column;
