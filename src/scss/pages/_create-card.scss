@@ -6,6 +6,7 @@
     background-color: $background-color;
     padding-left: 40px;
     padding-right: 40px;
+    height: 79vh;
   }
 }
 .form--create-card {
@@ -15,7 +16,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 79vh;
+    // height: 79vh;
   }
 }
 .header--scroll__create-card {
