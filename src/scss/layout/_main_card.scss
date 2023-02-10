@@ -14,11 +14,11 @@
     margin-top: 23px;
     margin-bottom: 21px;
     border-radius: 8px;
-    height: 700px;
+    // height: 700px;
   }
 
   @media (min-width: 1200px) {
-    height: 950px;
+    // height: 950px;
   }
 }
 .reset {
@@ -53,16 +53,16 @@
   line-height: 23px;
   margin-top: 10px;
   &.palette1 {
-      border-left-color: $dirty-blue;
-    }
-  
-    &.palette2 {
-      border-left-color: $rusty-red;
-    }
-  
-    &.palette3 {
-      border-left-color: $faded-orange;
-    }
+    border-left-color: $dirty-blue;
+  }
+
+  &.palette2 {
+    border-left-color: $rusty-red;
+  }
+
+  &.palette3 {
+    border-left-color: $faded-orange;
+  }
 }
 .nameSurname {
   font-size: 18px;
@@ -105,17 +105,16 @@
   padding-left: 10px;
   color: $dark-green-blue;
   &.palette1 .icon {
-      border-color: $hospital-green;
-    }
-  
+    border-color: $hospital-green;
+  }
+
   &.palette2 .icon {
-      border-color: $tomato;
-    }
-  
+    border-color: $tomato;
+  }
+
   &.palette3 .icon {
-      border-color: $light-grey-blue;
-    }
- 
+    border-color: $light-grey-blue;
+  }
 }
 .icon {
   border: solid 3px $hospital-green;
@@ -125,7 +124,6 @@
   height: 40px;
   width: 40px;
   margin-right: 5px;
-   
 }
 .mail,
 .linkedin,
@@ -133,15 +131,14 @@
 .telephone {
   color: $dark-green-blue;
   &.palette1 {
-      color: $dark-green-blue;
-    }
-  
-    &.palette2 {
-      color: $dried-blood;
-    }
-  
-    &.palette3 {
-      color: $slate;
-    }
-}
+    color: $dark-green-blue;
+  }
 
+  &.palette2 {
+    color: $dried-blood;
+  }
+
+  &.palette3 {
+    color: $slate;
+  }
+}
