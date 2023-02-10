@@ -52,12 +52,34 @@
   font-family: $font-montserrat;
   line-height: 23px;
   margin-top: 10px;
+  &.palette1 {
+      border-left-color: $dirty-blue;
+    }
+  
+    &.palette2 {
+      border-left-color: $rusty-red;
+    }
+  
+    &.palette3 {
+      border-left-color: $faded-orange;
+    }
 }
 .nameSurname {
   font-size: 18px;
   font-weight: bold;
   color: $dark-green;
   padding-left: 18px;
+  &.palette1 {
+    color: $dark-green-blue;
+  }
+
+  &.palette2 {
+    color: $dried-blood;
+  }
+
+  &.palette3 {
+    color: $slate;
+  }
 }
 .profileRole {
   color: $gunmetal;
@@ -67,12 +89,13 @@
 .profilePhotoContainer {
   width: 100%;
   height: 200px;
-  background: url('../images/default.png');
+  background: url("../images/default.png");
   background-size: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
+//la clase del padre se puede pasar a los hijos poniendo separado el nombre del hijo ( &.palette1 .icon) porque si lo pones en los hijos solo lo hereda el primero de ellos.
 
 .profileLinks {
   display: flex;
@@ -81,6 +104,18 @@
   padding-right: 60px;
   padding-left: 10px;
   color: $dark-green-blue;
+  &.palette1 .icon {
+      border-color: $hospital-green;
+    }
+  
+  &.palette2 .icon {
+      border-color: $tomato;
+    }
+  
+  &.palette3 .icon {
+      border-color: $light-grey-blue;
+    }
+ 
 }
 .icon {
   border: solid 3px $hospital-green;
@@ -90,23 +125,23 @@
   height: 40px;
   width: 40px;
   margin-right: 5px;
+   
 }
 .mail,
 .linkedin,
 .github,
 .telephone {
   color: $dark-green-blue;
+  &.palette1 {
+      color: $dark-green-blue;
+    }
+  
+    &.palette2 {
+      color: $dried-blood;
+    }
+  
+    &.palette3 {
+      color: $slate;
+    }
 }
 
-.palette1{
-  color:$dark-green-blue;
-
-}
-.palette2{
-  color: $dried-blood;
-    
-}
-.palette3{
-  color:$slate;
-    
-}
