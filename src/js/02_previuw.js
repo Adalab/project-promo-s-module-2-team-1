@@ -15,34 +15,32 @@ event.preventDefault();
 
 
 //Previuw con los valores del formulario
-switch(event.target.name){
+  switch(event.target.name){
   case 'name':
     console.log(event.target.value);
 
-    if (event.target.value==="")     
-    { namePreviuw.innerHTML= "Nombre Apellido";}
-    else
-    {namePreviuw.innerHTML=event.target.value;}
+    if (event.target.value==='') namePreviuw.innerHTML= 'Nombre Apellido';
+    else namePreviuw.innerHTML=event.target.value;
     break;
   case 'puesto':
-    if (event.target.value==="")     
-    { jobPreviuw.innerHTML= "Front-end developer";}
-    else
-    {jobPreviuw.innerHTML=event.target.value;}
+    if (event.target.value==='') jobPreviuw.innerHTML= 'Front-end developer';
+    else jobPreviuw.innerHTML=event.target.value;
     break;
   case 'email':
-    emailPreviuw.href="mailto:" + event.target.value;
-    console.log(emailPreviuw.href);
+    if (event.target.value==='') emailPreviuw.removeAttribute('href');
+    else emailPreviuw.href='mailto:' + event.target.value;
     break;
   case 'telephone':
-    telephonePreviuw.href="tel:"+ event.target.value;
+    if (event.target.value==='') telephonePreviuw.removeAttribute('href');
+    else telephonePreviuw.href='tel:'+ event.target.value;
     break;
   case 'github':
-    githubPreviuw.href=event.target.value;
+    if (event.target.value==='') githubPreviuw.removeAttribute('href');
+    else githubPreviuw.href= 'https://www.' + event.target.value;
     break;
   case 'linkelin':
-    linkelinPreviuw.href=event.target.value;
+    if (event.target.value==='') linkelinPreviuw.removeAttribute('href');
+    else linkelinPreviuw.href= 'https://www.' + event.target.value;
     break;
   }
-   
 }
