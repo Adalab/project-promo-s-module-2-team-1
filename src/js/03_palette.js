@@ -11,25 +11,31 @@ const linkelinPreview = document.querySelector('.js-card-linkedin');
 const linePreview = document.querySelector('.js-profileText');
 const borderPreview = document.querySelector('.js-border');
 const containerColor = document.querySelector('.js-containerColor');
-
+function removeColors(){
+  namePreview.classList.remove('palette1');
+  namePreview.classList.remove('palette2');
+  namePreview.classList.remove('palette3');
+}
 function handleClick(event) {
   // event.preventDefault();
 
   if (event.target.id==='color1'){
+    removeColors();
     namePreview.classList.add('palette1');
 
   }
   if (event.target.id==='color2'){
+    removeColors();
     namePreview.classList.add('palette2');
     
   }
   if (event.target.id==='color3'){
+    removeColors();
     namePreview.classList.add('palette3');
     
   }
 
   console.log(event.target.id);
-  console.log('hola mundo');
 }
 
 containerColor.addEventListener('click', handleClick);
