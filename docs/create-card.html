@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="icon" href="./assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6885363b9f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- <header class="header">
+      <img
+        class="header--logo"
+        src="./assets/images/logo-awesome-profile-cards.svg"
+        alt="imagen log awesome"
+      />
+    </header> -->
+    <header class="create-card--header">
+      <a href="index.html"><img
+        class="create-card--header__logo"
+        src="./assets/images/logo-awesome-profile-cards.svg"
+        alt="imagen log awesome"
+      /></a>
+     
+    </header>
+
+    <main class="main--create-card">
+      <section class="main_card">
+        <div>
+          <button type="reset" class="reset">
+            <i class="far fa-trash-alt"> Reset</i>
+          </button>
+        </div>
+        <div class="profileCard">
+          <section class="profileText js-profileText">
+            <h1 class="nameSurname js-card-nameSurname">Nombre Apellido</h1>
+            <p class="profileRole js-card-profileRole">Front-end developer</p>
+          </section>
+
+          <div class="profilePhotoContainer"></div>
+
+          <nav>
+            <ul class="profileLinks js-border">
+              <li class="icon">
+                <!-- Se borra el href para que si está vacío no se refresque la página -->
+                <!-- <a href="" class="telephone js-card-telephone"> -->
+                <a class="telephone js-card-telephone">
+                  <i class="fa-solid fa-mobile-screen-button"> </i>
+                </a>
+              </li>
+              <li class="icon">
+                <!-- <a href="" class="mail js-card-mail" target="_blank"> -->
+                <a class="mail js-card-mail" target="_blank">
+                  <i class="fa-regular fa-envelope"></i>
+                </a>
+              </li>
+              <li class="icon">
+                <!-- <a href="" class="linkedin js-card-linkedin" target="_blank"> -->
+                <a class="linkedin js-card-linkedin" target="_blank">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="icon">
+                <!-- <a href=" " class="github js-card-github" target="_blank"> -->
+                <a class="github js-card-github" target="_blank">
+                  <i class="fa-brands fa-github-alt"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+
+      <form
+        class="form--create-card"
+        action="https://formspree.io/f/myyakzyb"
+        method="post"
+      >
+        <fieldset>
+          <div class="create">
+          <legend
+            class="main--create js-design-legend"
+            title="despliega / cierra la sección"
+          >
+            <div class="main--create__legend">
+              <span class="main--create__span"
+                ><i class="fa-regular fa-object-ungroup"></i
+              ></span>
+              <span class="main--create__text">diseña</span>
+            </div>
+            <i
+              class="header--scroll__create-card js-designRotateScroll header--scroll__create-card__rotate fas fa-chevron-down sectionshare__arrow"
+            ></i>
+          </legend>
+
+        <div class="js-design-content">
+          <section class="main--create__form "> 
+            <p class="main--create__paragraph">colores</p>
+
+            <section class="main--create__colors js-containerColor">
+              <div class="main--create__div">
+                <label class="main--create__elections" for="color1">
+                  <input id="color1" type="radio" name="color" class="js-color1" />
+                  <div class="main--create__color">
+                    <div class="main--create__color1"></div>
+                    <div class="main--create__color2"></div>
+                    <div class="main--create__color3"></div>
+                  </div>
+                </label>
+              </div>
+
+              <div class="main--create__div">
+                <label class="main--create__elections" for="color2">
+                  <input id="color2" type="radio" name="color" class="js-color2" />
+                  <div class="main--create__color">
+                    <div class="main--create__color4"></div>
+                    <div class="main--create__color5"></div>
+                    <div class="main--create__color6"></div>
+                  </div>
+                </label>
+              </div>
+
+              <div class="main--create__div">
+                <label class="main--create__elections" for="color3">
+                  <input id="color3" type="radio" name="color" class="js-color3"/>
+                  <div class="main--create__color">
+                    <div class="main--create__color7"></div>
+                    <div class="main--create__color8"></div>
+                    <div class="main--create__color9"></div>
+                  </div>
+                </label>
+              </div>
+            </section>
+            </div>
+          </section>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="fill">
+            <legend class="fill--header js-fill-legend" title="despliega / cierra la sección">
+              <div class="fill--header__title">
+                <span class="fill--header__title__icon">
+                  <i class="fa-regular fa-keyboard"></i>
+                </span>
+                <span class="fill--header__title__text">rellena</span>
+              </div>
+              <i
+                class="header--scroll__create-card js-fill-rotate-scroll fas fa-chevron-down sectionshare__arrow"
+              ></i>
+            </legend>
+
+            <section class="js-fill-content collapsed">
+              <!-- name -->
+              <label class="form--label" for="name">
+                Nombre Completo
+                <input
+                  class="form--input"
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Ej: Sally Jill"
+                  required
+                />
+              </label>
+              <!-- puesto -->
+              <label class="form--label" for="puesto">
+                Puesto
+                <input
+                  class="form--input"
+                  id="puesto"
+                  type="text"
+                  name="puesto"
+                  placeholder="Ej: Front-end unicorn"
+                  required
+                />
+              </label>
+              <!-- Imagen -->
+              <label class="form--label" for="image"> Imagen de perfil</label>
+              <div class="form--photo">
+                <label class="form--photo__button" for="photo"> Añadir imagen </label>
+                <div class="form--foto__marco"></div>
+              </div>
+              <!--Email-->
+              <label class="form--label" for="email">
+                Email
+                <input
+                  class="form--input form--input--email"
+                  id="email"
+                  type="email"
+                  name="email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  placeholder="Ej:sally-hill@gmail.com"
+                  required
+                />
+              </label>
+
+              <!--Telephone-->
+              <label class="form--label" for="telephone">
+                Teléfono
+                <input
+                  class="form--input"
+                  id="telephone"
+                  type="tel"
+                  name="telephone"
+                  placeholder="Ej: 555-55-55-55"
+                  required
+                />
+              </label>
+              <!--Linkelin-->
+              <label class="form--label" for="linkelin">
+                Linkelin
+                <input
+                  class="form--input"
+                  id="linkelin"
+                  type="url"
+                  name="linkelin"
+                  pattern="linkedin.com/in/[a-z0-9._%+-]"
+                  placeholder="Ej: linkedin.com/in/sally.hill"
+                  required
+                />
+              </label>
+              <!--Github-->
+              <label class="form--label" for="github">
+                Github
+                <input
+                  class="form--input"
+                  id="github"
+                  type="url"
+                  name="github"
+                  pattern="linkedin.com/[a-z0-9._%+-]"
+                  placeholder="Ej: github.com/sally-hill"
+                  required
+                />
+              </label>
+            </section>
+        </fieldset>
+
+        <fieldset>
+          <div class="share">
+            <legend class="share--header js-share-legend" title="despliega / cierra la sección">
+              <div class="share--header__title">
+                <span class="share--header__title__icon">
+                  <i class="fa-sharp fa-solid fa-share-nodes"></i>
+                </span>
+                <span class="share--header__title__text">comparte</span>
+              </div>
+              <i class="js-share-rotate-scroll fas fa-chevron-down sectionshare__arrow"></i>
+            </legend>
+          <div class="js-share-content collapsed">
+            <div class="share--button ">
+              <button class="share--button__create"><i class="fa-regular fa-address-card icono"></i>crear tarjeta</button>
+            </div>
+
+            <div class="share--button2">
+              <p class="share--button2__text">        
+                La tarjeta ha sido creada:
+              </p>
+              <a href="" class="share--button2__nav">https://awesome-profile-card.com?id=A456DF0001</a>
+            </div>
+            <div class="button2">
+              <button class="share--button2__twitter"><span>
+                <i class="fa-brands fa-twitter"></i></span>
+                Compartir en twitter
+              </button>
+            </div>
+          
+          </div>
+        </fieldset>
+
+      </form>
+    </main>
+    <footer class="footerContent">
+     <!--- <section class="footerContent">-->
+        <p class="footerText">Awesome profile-cards @2018</p>
+        <a href="https://adalab.es/" target="_blank"><img class="logo" src="./assets/images/logo-adalab.png" alt="Logo Adalab" /></a>
+      <!--</section>--->
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
