@@ -65,7 +65,7 @@ const data = {
 
 function handleResetClick(ev) {
   ev.preventDefault();
-  data.palette = "color1";
+  data.palette = 'color1';
   data.name = "";
   data.job = "";
   data.phone = "";
@@ -106,11 +106,11 @@ function updateForm (){
   if (phoneForm.value === '') telephonePreviuw.removeAttribute('href');
   else telephonePreviuw.href = 'tel:' + phoneForm.value;
 
-  if (githubForm.value === '') githubPreviuw.removeAttribute("href");
-  else githubPreviuw.href = "https://www." + githubForm.value;
+  if (githubForm.value === '') githubPreviuw.removeAttribute('href');
+  else githubPreviuw.href = 'https://www.' + githubForm.value;
 
-  if (linkedinForm.value === "") linkedinPreviuw.removeAttribute("href");
-  else linkedinPreviuw.href = "https://www." + linkedinForm.value;
+  if (linkedinForm.value === '') linkedinPreviuw.removeAttribute('href');
+  else linkedinPreviuw.href = 'https://www.' + linkedinForm.value;
 }
 
 function fillPreviuw(event) {
