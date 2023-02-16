@@ -1,20 +1,20 @@
-'use strict';
-const formFill = document.querySelector('.js-fill-content');
-const namePreviuw = document.querySelector('.js-card-nameSurname');
-const jobPreviuw = document.querySelector('.js-card-profileRole');
-const telephonePreviuw = document.querySelector('.js-card-telephone');
-const emailPreviuw = document.querySelector('.js-card-mail');
-const githubPreviuw = document.querySelector('.js-card-github');
-const linkedinPreviuw = document.querySelector('.js-card-linkedin');
-const reset = document.querySelector('.js-reset');
+"use strict";
+const formFill = document.querySelector(".js-fill-content");
+const namePreviuw = document.querySelector(".js-card-nameSurname");
+const jobPreviuw = document.querySelector(".js-card-profileRole");
+const telephonePreviuw = document.querySelector(".js-card-telephone");
+const emailPreviuw = document.querySelector(".js-card-mail");
+const githubPreviuw = document.querySelector(".js-card-github");
+const linkedinPreviuw = document.querySelector(".js-card-linkedin");
+const reset = document.querySelector(".js-reset");
 
-formFill.addEventListener('keyup', fillPreviuw);
+formFill.addEventListener("keyup", fillPreviuw);
 
-function fillPreviuw(event) {
+/*function fillPreviuw(event) {
   event.preventDefault();
 
   //Previuw con los valores del formulario
-  switch (event.target.name) {
+  /*switch (event.target.name) {
     case 'name':
       if (event.target.value === '') namePreviuw.innerHTML = 'Nombre Apellido';
       else namePreviuw.innerHTML = event.target.value;
@@ -41,44 +41,83 @@ function fillPreviuw(event) {
       else linkedinPreviuw.href = 'https://www.' + event.target.value;
       break;
   }
-}
+}*/
 
 // reset del formulario
 
-const nameForm = document.querySelector('.js-name');
-const jobForm = document.querySelector('.js-job');
-const emailForm = document.querySelector('.js-email');
-const phoneForm = document.querySelector('.js-phone');
-const linkedinForm = document.querySelector('.js-linkedin');
-const githubForm = document.querySelector('.js-github');
+const nameForm = document.querySelector(".js-name");
+const jobForm = document.querySelector(".js-job");
+const emailForm = document.querySelector(".js-email");
+const phoneForm = document.querySelector(".js-phone");
+const linkedinForm = document.querySelector(".js-linkedin");
+const githubForm = document.querySelector(".js-github");
 
 const data = {
-  palette: '',
-  name: '',
-  job: '',
-  phone: '',
-  email: '',
-  linkedin: '',
-  github: '',
-  photo: '',
+  palette: "",
+  name: "",
+  job: "",
+  phone: "",
+  email: "",
+  linkedin: "",
+  github: "",
+  photo: "",
 };
 
 function handleResetClick(ev) {
   ev.preventDefault();
-  data.palette = 'color1';
-  data.name = '';
-  data.job = '';
-  data.phone = '';
-  data.email = '';
-  data.linkedin = '';
-  data.github = '';
-  data.photo = '';
+  data.palette = "color1";
+  data.name = "";
+  data.job = "";
+  data.phone = "";
+  data.email = "";
+  data.linkedin = "";
+  data.github = "";
+  data.photo = "";
   nameForm.value = data.name;
   jobForm.value = data.job;
   emailForm.value = data.email;
   phoneForm.value = data.phone;
   linkedinForm.value = data.linkedin;
   githubForm.value = data.github;
+
+  updateForm ();
 }
 
 reset.addEventListener('click', handleResetClick);
+
+nameForm.addEventListener('keyup', fillPreviuw);
+jobForm.addEventListener('keyup', fillPreviuw);
+emailForm.addEventListener('keyup', fillPreviuw);
+phoneForm.addEventListener('keyup', fillPreviuw);
+linkedinForm.addEventListener('keyup', fillPreviuw);
+githubForm.addEventListener('keyup', fillPreviuw);
+
+
+function updateForm (){
+  if (nameForm.value === '') namePreviuw.innerHTML = 'Nombre Apellido';
+  else namePreviuw.innerHTML = nameForm.value;
+
+  if (jobForm.value === '') jobPreviuw.innerHTML = 'Front-end developer';
+  else jobPreviuw.innerHTML = jobForm.value;
+
+  if (emailForm.value === '') emailPreviuw.removeAttribute('href');
+  else emailPreviuw.href = 'mailto:' + emailForm.value;
+
+  if (phoneForm.value === '') telephonePreviuw.removeAttribute('href');
+  else telephonePreviuw.href = 'tel:' + phoneForm.value;
+
+  if (githubForm.value === '') githubPreviuw.removeAttribute("href");
+  else githubPreviuw.href = "https://www." + githubForm.value;
+
+  if (linkedinForm.value === "") linkedinPreviuw.removeAttribute("href");
+  else linkedinPreviuw.href = "https://www." + linkedinForm.value;
+}
+
+function fillPreviuw(event) {
+  event.preventDefault();
+  updateForm ();
+}
+
+//reutilizamos la función updateForm en el reset para que vacíe la tarjeta.
+
+
