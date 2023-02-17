@@ -7,6 +7,7 @@ const emailPreviuw = document.querySelector(".js-card-mail");
 const githubPreviuw = document.querySelector(".js-card-github");
 const linkedinPreviuw = document.querySelector(".js-card-linkedin");
 const reset = document.querySelector(".js-reset");
+const photoPreview = document.querySelector(".js__profile-image");
 
 formFill.addEventListener("keyup", fillPreviuw);
 
@@ -51,35 +52,37 @@ const emailForm = document.querySelector(".js-email");
 const phoneForm = document.querySelector(".js-phone");
 const linkedinForm = document.querySelector(".js-linkedin");
 const githubForm = document.querySelector(".js-github");
+const photoForm = document.querySelector ('.js__profile-preview');
+
 
 const data = {
-  palette: "",
-  name: "",
-  job: "",
-  phone: "",
-  email: "",
-  linkedin: "",
-  github: "",
-  photo: "",
+  palette: '',
+  name: '',
+  job: '',
+  phone: '',
+  email: '',
+  linkedin: '',
+  github: '',
+  photo: '',
 };
 
 function handleResetClick(ev) {
   ev.preventDefault();
   data.palette = 'color1';
-  data.name = "";
-  data.job = "";
-  data.phone = "";
-  data.email = "";
-  data.linkedin = "";
-  data.github = "";
-  data.photo = "";
+  data.name = '';
+  data.job = '';
+  data.phone = '';
+  data.email = '';
+  data.linkedin = '';
+  data.github = '';
+  data.photo = '';
   nameForm.value = data.name;
   jobForm.value = data.job;
   emailForm.value = data.email;
   phoneForm.value = data.phone;
   linkedinForm.value = data.linkedin;
   githubForm.value = data.github;
-
+  photoForm.style.backgroundImage = '';
   updateForm ();
 }
 
@@ -91,7 +94,7 @@ emailForm.addEventListener('keyup', fillPreviuw);
 phoneForm.addEventListener('keyup', fillPreviuw);
 linkedinForm.addEventListener('keyup', fillPreviuw);
 githubForm.addEventListener('keyup', fillPreviuw);
-
+photoForm.addEventListener('keyup', fillPreviuw);
 
 function updateForm (){
   if (nameForm.value === '') namePreviuw.innerHTML = 'Nombre Apellido';
@@ -111,6 +114,9 @@ function updateForm (){
 
   if (linkedinForm.value === '') linkedinPreviuw.removeAttribute('href');
   else linkedinPreviuw.href = 'https://www.' + linkedinForm.value;
+
+  if (photoForm.style.backgroundImage  === '') photoPreview.style.backgroundImage = '';
+  
 }
 
 function fillPreviuw(event) {
