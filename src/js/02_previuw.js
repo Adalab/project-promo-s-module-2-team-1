@@ -7,9 +7,75 @@ const emailPreviuw = document.querySelector(".js-card-mail");
 const githubPreviuw = document.querySelector(".js-card-github");
 const linkedinPreviuw = document.querySelector(".js-card-linkedin");
 const reset = document.querySelector(".js-reset");
-const photoPreview = document.querySelector(".js__profile-image");
+const photoPreview = document.querySelector('.js__profile-image');
+const nameForm = document.querySelector(".js-name");
+const jobForm = document.querySelector(".js-job");
+const emailForm = document.querySelector(".js-email");
+const phoneForm = document.querySelector('.js-phone');
+const linkedinForm = document.querySelector(".js-linkedin");
+const githubForm = document.querySelector('.js-github');
+const photoForm = document.querySelector ('.js__profile-preview');
 
-formFill.addEventListener("keyup", fillPreviuw);
+
+const data = {
+  palette: '',
+  name: '',
+  job: '',
+  phone: '',
+  email: '',
+  linkedin: '',
+  github: '',
+  photo: '',
+};
+
+
+
+/*formFill.addEventListener('keyup', fillPreviuw);*/
+nameForm.addEventListener ('keyup', handleInputName);
+function handleInputName () {
+  data.name = nameForm.value;
+  updateForm (); 
+
+}
+
+jobForm.addEventListener ('keyup', handleInputJob);
+function handleInputJob () {
+  data.job = jobForm.value;
+  updateForm (); 
+  console.log (data);
+}
+
+emailForm.addEventListener ('keyup', handleInputEmail);
+function handleInputEmail () {
+  data.email = emailForm.value;
+  updateForm (); 
+}
+
+phoneForm.addEventListener ('keyup', handleInputPhone);
+function handleInputPhone () {
+  data.phone = phoneForm.value;
+  updateForm (); 
+}
+
+linkedinForm.addEventListener ('keyup', handleInputLinkedin);
+function handleInputLinkedin () {
+  data.linkedin = linkedinForm.value;
+  updateForm (); 
+}
+
+githubForm.addEventListener ('keyup', handleInputGithub);
+function handleInputGithub () {
+  data.github = githubForm.value;
+  updateForm (); 
+}
+
+photoForm.addEventListener ('keyup', handleInputPhoto);
+function handleInputPhoto () {
+  data.photo = photoForm.value;
+  updateForm (); 
+}
+
+
 
 /*function fillPreviuw(event) {
   event.preventDefault();
@@ -46,26 +112,6 @@ formFill.addEventListener("keyup", fillPreviuw);
 
 // reset del formulario
 
-const nameForm = document.querySelector(".js-name");
-const jobForm = document.querySelector(".js-job");
-const emailForm = document.querySelector(".js-email");
-const phoneForm = document.querySelector(".js-phone");
-const linkedinForm = document.querySelector(".js-linkedin");
-const githubForm = document.querySelector(".js-github");
-const photoForm = document.querySelector ('.js__profile-preview');
-
-
-const data = {
-  palette: '',
-  name: '',
-  job: '',
-  phone: '',
-  email: '',
-  linkedin: '',
-  github: '',
-  photo: '',
-};
-
 function handleResetClick(ev) {
   ev.preventDefault();
   data.palette = 'color1';
@@ -86,15 +132,7 @@ function handleResetClick(ev) {
   updateForm ();
 }
 
-reset.addEventListener('click', handleResetClick);
 
-nameForm.addEventListener('keyup', fillPreviuw);
-jobForm.addEventListener('keyup', fillPreviuw);
-emailForm.addEventListener('keyup', fillPreviuw);
-phoneForm.addEventListener('keyup', fillPreviuw);
-linkedinForm.addEventListener('keyup', fillPreviuw);
-githubForm.addEventListener('keyup', fillPreviuw);
-photoForm.addEventListener('keyup', fillPreviuw);
 
 function updateForm (){
   if (nameForm.value === '') namePreviuw.innerHTML = 'Nombre Apellido';
@@ -126,4 +164,13 @@ function fillPreviuw(event) {
 
 //reutilizamos la función updateForm en el reset para que vacíe la tarjeta.
 
+reset.addEventListener('click', handleResetClick);
+
+/*nameForm.addEventListener('keyup', fillPreviuw);*/
+jobForm.addEventListener('keyup', fillPreviuw);
+emailForm.addEventListener('keyup', fillPreviuw);
+phoneForm.addEventListener('keyup', fillPreviuw);
+linkedinForm.addEventListener('keyup', fillPreviuw);
+githubForm.addEventListener('keyup', fillPreviuw);
+photoForm.addEventListener('keyup', fillPreviuw);
 
