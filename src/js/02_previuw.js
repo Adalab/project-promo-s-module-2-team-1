@@ -22,11 +22,13 @@ function isValidName(name){
 }
 
 nameForm.addEventListener ('blur', checkInputName);
-function checkInputName () 
+function checkInputName ()
 {
-  if (!isValidName(nameForm.value)) nameForm.classList.add('form--input__error');
-  else nameForm.classList.remove('form--input__error');
- 
+  if (nameForm.value)
+  {
+    if (!isValidName(nameForm.value)) nameForm.classList.add('form--input__error');
+    else nameForm.classList.remove('form--input__error');
+  }
 }
 //monica:hasta aqui
 
