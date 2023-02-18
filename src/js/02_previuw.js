@@ -1,5 +1,5 @@
 "use strict";
-const formFill = document.querySelector(".js-fill-content");
+
 const namePreviuw = document.querySelector(".js-card-nameSurname");
 const jobPreviuw = document.querySelector(".js-card-profileRole");
 const telephonePreviuw = document.querySelector(".js-card-telephone");
@@ -16,33 +16,30 @@ const linkedinForm = document.querySelector(".js-linkedin");
 const githubForm = document.querySelector('.js-github');
 const photoForm = document.querySelector ('.js__profile-preview');
 
+//propuesta monica:mejora para validar los input
+function isValidName(name){
+  return /^[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$/.test(name);
+}
 
-const data = {
-  palette: '',
-  name: '',
-  job: '',
-  phone: '',
-  email: '',
-  linkedin: '',
-  github: '',
-  photo: '',
-};
+nameForm.addEventListener ('blur', checkInputName);
+function checkInputName () 
+{
+  if (!isValidName(nameForm.value)) nameForm.classList.add('form--input__error');
+  else nameForm.classList.remove('form--input__error');
+ 
+}
+//monica:hasta aqui
 
-
-
-/*formFill.addEventListener('keyup', fillPreviuw);*/
 nameForm.addEventListener ('keyup', handleInputName);
 function handleInputName () {
   data.name = nameForm.value;
   updateForm (); 
-
 }
 
 jobForm.addEventListener ('keyup', handleInputJob);
 function handleInputJob () {
   data.job = jobForm.value;
   updateForm (); 
-  console.log (data);
 }
 
 emailForm.addEventListener ('keyup', handleInputEmail);
@@ -66,17 +63,23 @@ function handleInputLinkedin () {
 githubForm.addEventListener ('keyup', handleInputGithub);
 function handleInputGithub () {
   data.github = githubForm.value;
-  updateForm (); 
+  updateForm ();
 }
 
-photoForm.addEventListener ('keyup', handleInputPhoto);
-function handleInputPhoto () {
-  data.photo = photoForm.value;
-  updateForm (); 
-}
+//propuesta monica:creo que esto no es necesario
+
+// photoForm.addEventListener ('keyup', handleInputPhoto);
+// function handleInputPhoto ()
+// {
+//   // data.photo = photoForm.value;
+//   data.photo = photoForm.style.backgroundImage;
+//   updateForm ();
+// }
+//monica:hasta aqui
 
 
-
+// const formFill = document.querySelector(".js-fill-content");
+// formFill.addEventListener('keyup', fillPreviuw);
 /*function fillPreviuw(event) {
   event.preventDefault();
 
@@ -128,13 +131,17 @@ function handleResetClick(ev) {
   phoneForm.value = data.phone;
   linkedinForm.value = data.linkedin;
   githubForm.value = data.github;
-  photoForm.style.backgroundImage = '';
+  photoForm.style.backgroundImage = data.photo;
+  //propuesta monica:añadí estas dos funciones para cambiar 
+  //a la paleta1
+  removeColors();
+  addColor('palette1');
+  //monica:hasta aqui
   updateForm ();
 }
 
-
-
-function updateForm (){
+function updateForm ()
+{
   if (nameForm.value === '') namePreviuw.innerHTML = 'Nombre Apellido';
   else namePreviuw.innerHTML = nameForm.value;
 
@@ -150,27 +157,34 @@ function updateForm (){
   if (githubForm.value === '') githubPreviuw.removeAttribute('href');
   else githubPreviuw.href = 'https://www.' + githubForm.value;
 
-  if (linkedinForm.value === '') linkedinPreviuw.removeAttribute('href');
-  else linkedinPreviuw.href = 'https://www.' + linkedinForm.value;
-
+  //propuesta monica: os parece si cambiamos removeAttribute('href') por deshabilitar los links
+  if (linkedinForm.value === '') linkedinPreviuw.classList.add('disabled-link');
+  else 
+  {
+    linkedinPreviuw.href = 'https://www.' + linkedinForm.value;
+    linkedinPreviuw.classList.remove('disabled-link');
+  }
+  //monica:hasta aqui
   if (photoForm.style.backgroundImage  === '') photoPreview.style.backgroundImage = '';
-  
 }
-
-function fillPreviuw(event) {
-  event.preventDefault();
-  updateForm ();
-}
-
-//reutilizamos la función updateForm en el reset para que vacíe la tarjeta.
 
 reset.addEventListener('click', handleResetClick);
 
-/*nameForm.addEventListener('keyup', fillPreviuw);*/
-jobForm.addEventListener('keyup', fillPreviuw);
-emailForm.addEventListener('keyup', fillPreviuw);
-phoneForm.addEventListener('keyup', fillPreviuw);
-linkedinForm.addEventListener('keyup', fillPreviuw);
-githubForm.addEventListener('keyup', fillPreviuw);
-photoForm.addEventListener('keyup', fillPreviuw);
+
+// function fillPreviuw(event) {
+//   event.preventDefault();
+//   updateForm ();
+// }
+
+//reutilizamos la función updateForm en el reset para que vacíe la tarjeta.
+
+
+
+// nameForm.addEventListener('keyup', fillPreviuw);
+// jobForm.addEventListener('keyup', fillPreviuw);
+// emailForm.addEventListener('keyup', fillPreviuw);
+// phoneForm.addEventListener('keyup', fillPreviuw);
+// linkedinForm.addEventListener('keyup', fillPreviuw);
+// githubForm.addEventListener('keyup', fillPreviuw);
+// photoForm.addEventListener('keyup', fillPreviuw);
 
