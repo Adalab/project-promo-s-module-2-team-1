@@ -21,7 +21,7 @@ function isValidName(name){
   return /^[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$/.test(name);
 }
 
-nameForm.addEventListener ('blur', checkInputName);
+// nameForm.addEventListener ('blur', checkInputName);
 function checkInputName ()
 {
   if (nameForm.value)
