@@ -125,14 +125,15 @@ function handleInputGithub () {
 
 function handleResetClick(ev) {
   ev.preventDefault();
-  data.palette = 'color1';
+  data.palette = '1';
   data.name = '';
   data.job = '';
   data.phone = '';
+  data.photo = '';
   data.email = '';
   data.linkedin = '';
   data.github = '';
-  data.photo = '';
+  
   nameForm.value = data.name;
   jobForm.value = data.job;
   emailForm.value = data.email;

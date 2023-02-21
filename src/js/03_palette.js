@@ -39,7 +39,7 @@ function handleClick(event) {
   data.palette=event.target.id;
   localStorage.setItem('formData', JSON.stringify(data));
   
-  if (event.target.id==='color1'){
+  if (event.target.id==='1'){
     removeColors();
     addColor('palette1');
 
@@ -54,7 +54,7 @@ function handleClick(event) {
     //monica:hasta aqui
 
   }
-  if (event.target.id==='color2'){
+  if (event.target.id==='2'){
     removeColors();
     addColor('palette2');
     // namePreview.classList.add('palette2');
@@ -66,7 +66,7 @@ function handleClick(event) {
     // borderPreview.classList.add ('palette2');
     
   }
-  if (event.target.id==='color3')
+  if (event.target.id==='3')
   {
     removeColors();
     addColor('palette3');
