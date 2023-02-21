@@ -36,36 +36,42 @@ nameForm.addEventListener ('keyup', handleInputName);
 function handleInputName () {
   data.name = nameForm.value;
   updateForm (); 
+  localStorage.setItem('formData', JSON.stringify(data));
 }
 
 jobForm.addEventListener ('keyup', handleInputJob);
 function handleInputJob () {
   data.job = jobForm.value;
   updateForm (); 
+  localStorage.setItem('formData', JSON.stringify(data));
 }
 
 emailForm.addEventListener ('keyup', handleInputEmail);
 function handleInputEmail () {
   data.email = emailForm.value;
   updateForm (); 
+  localStorage.setItem('formData', JSON.stringify(data));
 }
 
 phoneForm.addEventListener ('keyup', handleInputPhone);
 function handleInputPhone () {
   data.phone = phoneForm.value;
   updateForm (); 
+  localStorage.setItem('formData', JSON.stringify(data));
 }
 
 linkedinForm.addEventListener ('keyup', handleInputLinkedin);
 function handleInputLinkedin () {
   data.linkedin = linkedinForm.value;
   updateForm (); 
+  localStorage.setItem('formData', JSON.stringify(data));
 }
 
 githubForm.addEventListener ('keyup', handleInputGithub);
 function handleInputGithub () {
   data.github = githubForm.value;
   updateForm ();
+  localStorage.setItem('formData', JSON.stringify(data));
 }
 
 //propuesta monica:creo que esto no es necesario
@@ -167,7 +173,9 @@ function updateForm ()
     linkedinPreviuw.classList.remove('disabled-link');
   }
   //monica:hasta aqui
-  if (photoForm.style.backgroundImage  === '') photoPreview.style.backgroundImage = '';
+  if (photoForm.style.backgroundImage  === '') photoPreview.style.backgroundImage = ''; else {
+    photoPreview.style.backgroundImage = photoForm.style.backgroundImage;
+  }
 }
 
 reset.addEventListener('click', handleResetClick);

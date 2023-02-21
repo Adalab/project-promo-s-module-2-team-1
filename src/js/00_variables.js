@@ -20,7 +20,7 @@ const linePreview = document.querySelector('.js-profileText');
 const borderPreview = document.querySelector('.js-border');
 const containerColor = document.querySelector('.js-containerColor');
 
-const data = {
+let data = {
   palette: '',
   name: '',
   job: '',

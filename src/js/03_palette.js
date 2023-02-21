@@ -37,7 +37,8 @@ function addColor(palette){
 function handleClick(event) {
   // event.preventDefault(); //nos impide seleccionar el radio button
   data.palette=event.target.id;
-
+  localStorage.setItem('formData', JSON.stringify(data));
+  
   if (event.target.id==='color1'){
     removeColors();
     addColor('palette1');
