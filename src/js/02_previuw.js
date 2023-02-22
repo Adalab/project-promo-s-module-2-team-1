@@ -1,76 +1,77 @@
-"use strict";
+'use strict';
 
-const namePreviuw = document.querySelector(".js-card-nameSurname");
-const jobPreviuw = document.querySelector(".js-card-profileRole");
-const telephonePreviuw = document.querySelector(".js-card-telephone");
-const emailPreviuw = document.querySelector(".js-card-mail");
-const githubPreviuw = document.querySelector(".js-card-github");
-const linkedinPreviuw = document.querySelector(".js-card-linkedin");
-const reset = document.querySelector(".js-reset");
+const namePreviuw = document.querySelector('.js-card-nameSurname');
+const jobPreviuw = document.querySelector('.js-card-profileRole');
+const telephonePreviuw = document.querySelector('.js-card-telephone');
+const emailPreviuw = document.querySelector('.js-card-mail');
+const githubPreviuw = document.querySelector('.js-card-github');
+const linkedinPreviuw = document.querySelector('.js-card-linkedin');
+const reset = document.querySelector('.js-reset');
 const photoPreview = document.querySelector('.js__profile-image');
-const nameForm = document.querySelector(".js-name");
-const jobForm = document.querySelector(".js-job");
-const emailForm = document.querySelector(".js-email");
+const nameForm = document.querySelector('.js-name');
+const jobForm = document.querySelector('.js-job');
+const emailForm = document.querySelector('.js-email');
 const phoneForm = document.querySelector('.js-phone');
-const linkedinForm = document.querySelector(".js-linkedin");
+const linkedinForm = document.querySelector('.js-linkedin');
 const githubForm = document.querySelector('.js-github');
-const photoForm = document.querySelector ('.js__profile-preview');
-
+const photoForm = document.querySelector('.js__profile-preview');
+const color1 = document.querySelector('.js-color1');
+const color2 = document.querySelector('.js-color2');
+const color3 = document.querySelector('.js-color3');
 //propuesta monica:mejora para validar los input
-function isValidName(name){
+function isValidName(name) {
   return /^[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$/.test(name);
 }
 
 // nameForm.addEventListener ('blur', checkInputName);
-function checkInputName ()
-{
-  if (nameForm.value)
-  {
-    if (!isValidName(nameForm.value)) nameForm.classList.add('form--input__error');
+function checkInputName() {
+  if (nameForm.value) {
+    if (!isValidName(nameForm.value))
+      nameForm.classList.add('form--input__error');
     else nameForm.classList.remove('form--input__error');
   }
 }
 //monica:hasta aqui
 
-nameForm.addEventListener ('keyup', handleInputName);
-function handleInputName () {
+nameForm.addEventListener('keyup', handleInputName);
+function handleInputName() {
   data.name = nameForm.value;
-  updateForm (); 
+  updateForm();
   localStorage.setItem('formData', JSON.stringify(data));
 }
 
-jobForm.addEventListener ('keyup', handleInputJob);
-function handleInputJob () {
+jobForm.addEventListener('keyup', handleInputJob);
+function handleInputJob() {
   data.job = jobForm.value;
-  updateForm (); 
+  updateForm();
   localStorage.setItem('formData', JSON.stringify(data));
 }
 
-emailForm.addEventListener ('keyup', handleInputEmail);
-function handleInputEmail () {
+emailForm.addEventListener('keyup', handleInputEmail);
+function handleInputEmail() {
   data.email = emailForm.value;
-  updateForm (); 
+  updateForm();
   localStorage.setItem('formData', JSON.stringify(data));
 }
 
-phoneForm.addEventListener ('keyup', handleInputPhone);
-function handleInputPhone () {
+phoneForm.addEventListener('keyup', handleInputPhone);
+function handleInputPhone() {
   data.phone = phoneForm.value;
-  updateForm (); 
+  updateForm();
   localStorage.setItem('formData', JSON.stringify(data));
 }
 
-linkedinForm.addEventListener ('keyup', handleInputLinkedin);
-function handleInputLinkedin () {
+linkedinForm.addEventListener('keyup', handleInputLinkedin);
+function handleInputLinkedin() {
   data.linkedin = linkedinForm.value;
-  updateForm (); 
+  updateForm();
   localStorage.setItem('formData', JSON.stringify(data));
 }
 
-githubForm.addEventListener ('keyup', handleInputGithub);
-function handleInputGithub () {
+githubForm.addEventListener('keyup', handleInputGithub);
+function handleInputGithub() {
   data.github = githubForm.value;
-  updateForm ();
+  updateForm();
   localStorage.setItem('formData', JSON.stringify(data));
 }
 
@@ -84,7 +85,6 @@ function handleInputGithub () {
 //   updateForm ();
 // }
 //monica:hasta aqui
-
 
 // const formFill = document.querySelector(".js-fill-content");
 // formFill.addEventListener('keyup', fillPreviuw);
@@ -125,6 +125,16 @@ function handleInputGithub () {
 
 function handleResetClick(ev) {
   ev.preventDefault();
+  // const idPallete = document.getElementById('1');
+  // idPallete.setAttribute('checked', true);
+
+  // const idPallete = document.getElementById('2');
+  // idPallete.setAttribute('checked', false);
+
+  // const idPallete = document.getElementById('3');
+  // idPallete.setAttribute('checked', false);
+
+  // console.log(idPallete);
   data.palette = '1';
   data.name = '';
   data.job = '';
@@ -133,7 +143,9 @@ function handleResetClick(ev) {
   data.email = '';
   data.linkedin = '';
   data.github = '';
-  
+  color1.checked = true;
+  color2.checked = false;
+  color3.checked = false;
   nameForm.value = data.name;
   jobForm.value = data.job;
   emailForm.value = data.email;
@@ -141,16 +153,16 @@ function handleResetClick(ev) {
   linkedinForm.value = data.linkedin;
   githubForm.value = data.github;
   photoForm.style.backgroundImage = data.photo;
-  //propuesta monica:añadí estas dos funciones para cambiar 
+
+  //propuesta monica:añadí estas dos funciones para cambiar
   //a la paleta1
   removeColors();
   addColor('palette1');
   //monica:hasta aqui
-  updateForm ();
+  updateForm();
 }
 
-function updateForm ()
-{
+function updateForm() {
   if (nameForm.value === '') namePreviuw.innerHTML = 'Nombre Apellido';
   else namePreviuw.innerHTML = nameForm.value;
 
@@ -168,19 +180,19 @@ function updateForm ()
 
   //propuesta monica: os parece si cambiamos removeAttribute('href') por deshabilitar los links
   if (linkedinForm.value === '') linkedinPreviuw.classList.add('disabled-link');
-  else 
-  {
+  else {
     linkedinPreviuw.href = 'https://www.' + linkedinForm.value;
     linkedinPreviuw.classList.remove('disabled-link');
   }
   //monica:hasta aqui
-  if (photoForm.style.backgroundImage  === '') photoPreview.style.backgroundImage = ''; else {
+  if (photoForm.style.backgroundImage === '')
+    photoPreview.style.backgroundImage = '';
+  else {
     photoPreview.style.backgroundImage = photoForm.style.backgroundImage;
   }
 }
 
 reset.addEventListener('click', handleResetClick);
-
 
 // function fillPreviuw(event) {
 //   event.preventDefault();
@@ -189,8 +201,6 @@ reset.addEventListener('click', handleResetClick);
 
 //reutilizamos la función updateForm en el reset para que vacíe la tarjeta.
 
-
-
 // nameForm.addEventListener('keyup', fillPreviuw);
 // jobForm.addEventListener('keyup', fillPreviuw);
 // emailForm.addEventListener('keyup', fillPreviuw);
@@ -198,4 +208,3 @@ reset.addEventListener('click', handleResetClick);
 // linkedinForm.addEventListener('keyup', fillPreviuw);
 // githubForm.addEventListener('keyup', fillPreviuw);
 // photoForm.addEventListener('keyup', fillPreviuw);
-
