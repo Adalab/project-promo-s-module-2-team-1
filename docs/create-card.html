@@ -51,7 +51,7 @@
     <main class="main--create-card">
       <section class="main_card">
         <div>
-          <button type="reset" class="reset">
+          <button type="reset" class="reset js-reset">
             <i class="far fa-trash-alt"> Reset</i>
           </button>
         </div>
@@ -61,8 +61,10 @@
             <p class="profileRole js-card-profileRole">Front-end developer</p>
           </section>
 
-          <div class="profilePhotoContainer"></div>
-
+        
+            <div class="profilePhotoContainer profile__image js__profile-image"
+              style="background-image:src= ../../images/default.png"></div>
+        
           <nav>
             <ul class="profileLinks js-border">
               <li class="icon">
@@ -124,8 +126,8 @@
 
             <section class="main--create__colors js-containerColor">
               <div class="main--create__div">
-                <label class="main--create__elections" for="color1">
-                  <input id="color1" type="radio" name="color" class="js-color1" />
+                <label class="main--create__elections" for="1">
+                  <input id="1" type="radio" name="color" class="js-color1" checked/>
                   <div class="main--create__color">
                     <div class="main--create__color1"></div>
                     <div class="main--create__color2"></div>
@@ -135,8 +137,8 @@
               </div>
 
               <div class="main--create__div">
-                <label class="main--create__elections" for="color2">
-                  <input id="color2" type="radio" name="color" class="js-color2" />
+                <label class="main--create__elections" for="2">
+                  <input id="2" type="radio" name="color" class="js-color2" />
                   <div class="main--create__color">
                     <div class="main--create__color4"></div>
                     <div class="main--create__color5"></div>
@@ -146,8 +148,8 @@
               </div>
 
               <div class="main--create__div">
-                <label class="main--create__elections" for="color3">
-                  <input id="color3" type="radio" name="color" class="js-color3"/>
+                <label class="main--create__elections" for="3">
+                  <input id="3" type="radio" name="color" class="js-color3"/>
                   <div class="main--create__color">
                     <div class="main--create__color7"></div>
                     <div class="main--create__color8"></div>
@@ -177,10 +179,10 @@
 
             <section class="js-fill-content collapsed">
               <!-- name -->
-              <label class="form--label" for="name">
+              <label class="form--label"  for="name">
                 Nombre Completo
                 <input
-                  class="form--input"
+                  class="form--input js-name"
                   id="name"
                   type="text"
                   name="name"
@@ -192,7 +194,7 @@
               <label class="form--label" for="puesto">
                 Puesto
                 <input
-                  class="form--input"
+                  class="form--input js-job"
                   id="puesto"
                   type="text"
                   name="puesto"
@@ -201,16 +203,32 @@
                 />
               </label>
               <!-- Imagen -->
-              <label class="form--label" for="image"> Imagen de perfil</label>
+              <!----<label class="form--label" for="image"> Imagen de perfil</label>
               <div class="form--photo">
                 <label class="form--photo__button" for="photo"> Añadir imagen </label>
                 <div class="form--foto__marco"></div>
+              </div>--->
+
+              <div class="action">
+                <label class="form--label action__upload-btn" >Imagen de perfil</label>
               </div>
+              <div class="preview-photo">
+                <label class="form--photo__button" for="img-selector"> Añadir imagen </label>
+                <input type="file" name="" id="img-selector" class=" form--photo__button action__hiddenField js__profile-upload-btn" value="Añadir imagen" >
+          
+                     <div class="profile__preview js__profile-preview"></div>
+              </div>
+
+
+
+
+
+
               <!--Email-->
               <label class="form--label" for="email">
                 Email
                 <input
-                  class="form--input form--input--email"
+                  class="form--input form--input--email js-email"
                   id="email"
                   type="email"
                   name="email"
@@ -224,7 +242,7 @@
               <label class="form--label" for="telephone">
                 Teléfono
                 <input
-                  class="form--input"
+                  class="form--input js-phone"
                   id="telephone"
                   type="tel"
                   name="telephone"
@@ -234,9 +252,9 @@
               </label>
               <!--Linkelin-->
               <label class="form--label" for="linkelin">
-                Linkelin
+                Linkedin
                 <input
-                  class="form--input"
+                  class="form--input js-linkedin"
                   id="linkelin"
                   type="url"
                   name="linkelin"
@@ -249,7 +267,7 @@
               <label class="form--label" for="github">
                 Github
                 <input
-                  class="form--input"
+                  class="form--input js-github"
                   id="github"
                   type="url"
                   name="github"
@@ -274,17 +292,17 @@
             </legend>
           <div class="js-share-content collapsed">
             <div class="share--button ">
-              <button class="share--button__create"><i class="fa-regular fa-address-card icono"></i>crear tarjeta</button>
+              <button class="share--button__create js-share--button__create"><i class="fa-regular fa-address-card icono"></i>crear tarjeta</button>
             </div>
 
             <div class="share--button2">
-              <p class="share--button2__text">        
-                La tarjeta ha sido creada:
+              <p class="share--button2__text hiddenField js-share--button2__text">        
+                
               </p>
-              <a href="" class="share--button2__nav">https://awesome-profile-card.com?id=A456DF0001</a>
+              <a href="" class="share--button2__nav  hiddenField js-share--button2__nav"></a>
             </div>
             <div class="button2">
-              <button class="share--button2__twitter"><span>
+              <button class="share--button2__twitter hiddenField js-share--button2__twitter"><span>
                 <i class="fa-brands fa-twitter"></i></span>
                 Compartir en twitter
               </button>
