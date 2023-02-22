@@ -6,7 +6,6 @@ const twitterButton = document.querySelector('.js-share--button2__twitter');
 
 function handleClickShare(event) {
   console.log('Entra en share');
-  // data.photo='url';
   console.log(data);
   event.preventDefault();
   fetch('https://dev.adalab.es/api/card/', {
@@ -18,7 +17,7 @@ function handleClickShare(event) {
   })
     .then((response) => response.json())
     .then((data) => {
-      // console.log(data);
+     
       if (data.success) {
         shareMessage.innerHTML = 'La tarjeta ha sido creada:';
         shareUrl.innerHTML = data.cardURL;
@@ -26,7 +25,6 @@ function handleClickShare(event) {
         twitterButton.classList.remove('hiddenField');
         shareUrl.classList.remove('hiddenField');
       } else {
-        // shareMessage.innerHTML='Ha ocurrido un error';
         shareMessage.innerHTML = data.error;
         shareUrl.href = '';
       }
@@ -36,3 +34,4 @@ function handleClickShare(event) {
 }
 
 shareButton.addEventListener('click', handleClickShare);
+
