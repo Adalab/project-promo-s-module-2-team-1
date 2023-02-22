@@ -169,22 +169,28 @@ function updateForm() {
   if (jobForm.value === '') jobPreviuw.innerHTML = 'Front-end developer';
   else jobPreviuw.innerHTML = jobForm.value;
 
-  if (emailForm.value === '') emailPreviuw.removeAttribute('href');
-  else emailPreviuw.href = 'mailto:' + emailForm.value;
+  if (emailForm.value === '') emailPreviuw.classList.add('disabled-link');
+  else {
+    emailPreviuw.href = 'mailto:' + emailForm.value;
+    emailPreviuw.classList.remove('disabled-link');
+  }
+  if (phoneForm.value === '') telephonePreviuw.classList.add('disabled-link');
+  else {
+    telephonePreviuw.href = 'tel:' + phoneForm.value;
+    telephonePreviuw.classList.remove('disabled-link');
+  }
+  if (githubForm.value === '') githubPreviuw.classList.add('disabled-link');
+  else{ 
+    githubPreviuw.href = 'https://www.' + githubForm.value;
+    githubPreviuw.classList.remove('disabled-link');
+  }
 
-  if (phoneForm.value === '') telephonePreviuw.removeAttribute('href');
-  else telephonePreviuw.href = 'tel:' + phoneForm.value;
-
-  if (githubForm.value === '') githubPreviuw.removeAttribute('href');
-  else githubPreviuw.href = 'https://www.' + githubForm.value;
-
-  //propuesta monica: os parece si cambiamos removeAttribute('href') por deshabilitar los links
   if (linkedinForm.value === '') linkedinPreviuw.classList.add('disabled-link');
   else {
     linkedinPreviuw.href = 'https://www.' + linkedinForm.value;
     linkedinPreviuw.classList.remove('disabled-link');
   }
-  //monica:hasta aqui
+ 
   if (photoForm.style.backgroundImage === '')
     photoPreview.style.backgroundImage = '';
   else {
