@@ -152,7 +152,7 @@ function handleResetClick(ev) {
   phoneForm.value = data.phone;
   linkedinForm.value = data.linkedin;
   githubForm.value = data.github;
-  photoForm.style.backgroundImage = data.photo;
+  photoForm.style.backgroundImage = `url(${data.photo})`;
 
   //propuesta monica:añadí estas dos funciones para cambiar
   //a la paleta1

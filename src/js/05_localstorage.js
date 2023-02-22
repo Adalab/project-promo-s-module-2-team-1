@@ -7,7 +7,7 @@ if(localStorageData)
   nameForm.value = data.name;
   emailForm.value=data.email;
   phoneForm.value=data.phone;
-  photoForm.style.backgroundImage = data.photo;
+  photoForm.style.backgroundImage = `url(${data.photo})`;
   linkedinForm.value=data.linkedin;
   githubForm.value=data.github;
   jobForm.value=data.job;
