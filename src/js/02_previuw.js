@@ -86,6 +86,9 @@ function handleResetClick(ev) {
   //funciones para cambiar a la paleta1
   removeColors();
   addColor('palette1');
+  shareMessage.classList.add('hiddenField');
+twitterButton.classList.add('hiddenField');
+shareUrl.classList.add('hiddenField');
   //reseteamos el localstorage y el form
   localStorage.setItem('formData', JSON.stringify(data));
   updateForm();
