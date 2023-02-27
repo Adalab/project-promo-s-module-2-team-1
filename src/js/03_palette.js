@@ -42,42 +42,15 @@ function handleClick(event) {
   if (event.target.id==='1'){
     removeColors();
     addColor('palette1');
-
-    //propuesta monica:sustitui el codigo que está debajo por la funcción addColor()
-    // namePreview.classList.add('palette1');
-    // telephonePreview.classList.add ('palette1');
-    // emailPreview.classList.add ('palette1');
-    // githubPreview.classList.add ('palette1');
-    // linkelinPreview.classList.add ('palette1');
-    // linePreview.classList.add ('palette1');
-    // borderPreview.classList.add ('palette1');
-    //monica:hasta aqui
-
   }
   if (event.target.id==='2'){
     removeColors();
     addColor('palette2');
-    // namePreview.classList.add('palette2');
-    // telephonePreview.classList.add ('palette2');
-    // emailPreview.classList.add ('palette2');
-    // githubPreview.classList.add ('palette2');
-    // linkelinPreview.classList.add ('palette2');
-    // linePreview.classList.add ('palette2');
-    // borderPreview.classList.add ('palette2');
-    
   }
   if (event.target.id==='3')
   {
     removeColors();
     addColor('palette3');
-    // namePreview.classList.add('palette3');
-    // telephonePreview.classList.add ('palette3');
-    // emailPreview.classList.add ('palette3');
-    // githubPreview.classList.add ('palette3');
-    // linkelinPreview.classList.add ('palette3');
-    // linePreview.classList.add ('palette3');
-    // borderPreview.classList.add ('palette3');
-    
   }
 
 }

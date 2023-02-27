@@ -7,11 +7,25 @@ if(localStorageData)
   nameForm.value = data.name;
   emailForm.value=data.email;
   phoneForm.value=data.phone;
-  photoForm.style.backgroundImage = `url(${data.photo})`;
+
+  const ruta= './assets/images/default.png';
+
+  if (data.photo===ruta) photoForm.style.backgroundImage='';
+  else photoForm.style.backgroundImage=`url(${data.photo})`;
+
+  photoPreview.style.backgroundImage=`url(${data.photo})`;
   linkedinForm.value=data.linkedin;
   githubForm.value=data.github;
   jobForm.value=data.job;
-    
+  if (data.palette==='1'){
+    color1.checked = true;
+  }else if(data.palette==='2'){
+    color2.checked = true;
+  }else{
+    color3.checked = true;
+  }
   updateForm();
+  removeColors();
+  addColor(`palette${data.palette}`);
 }
-console.log(localStorageData);
+
