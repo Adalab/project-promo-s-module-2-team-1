@@ -19,6 +19,8 @@ const color1 = document.querySelector('.js-color1');
 const color2 = document.querySelector('.js-color2');
 const color3 = document.querySelector('.js-color3');
 
+// const pathDefault='./assets/images/default.png';
+const pathDefault='../images/default.png';
 nameForm.addEventListener('keyup', handleInputName);
 function handleInputName() {
   data.name = nameForm.value;
@@ -65,7 +67,6 @@ function handleInputGithub() {
 
 function handleResetClick(ev) {
   ev.preventDefault();
-  const pathDefault='./assets/images/default.png';
   data.palette = '1';
   data.name = '';
   data.job = '';
@@ -87,8 +88,8 @@ function handleResetClick(ev) {
   removeColors();
   addColor('palette1');
   shareMessage.classList.add('hiddenField');
-twitterButton.classList.add('hiddenField');
-shareUrl.classList.add('hiddenField');
+  twitterButton.classList.add('hiddenField');
+  shareUrl.classList.add('hiddenField');
   //reseteamos el localstorage y el form
   localStorage.setItem('formData', JSON.stringify(data));
   updateForm();
@@ -123,9 +124,8 @@ function updateForm() {
     linkedinPreviuw.classList.remove('disabled-link');
   }
   
-  const ruta= './assets/images/default.png';
   if (photoForm.style.backgroundImage === '')
-     photoPreview.style.backgroundImage = `url(${ruta})`;
+     photoPreview.style.backgroundImage = `url(${pathDefault})`;
   else {
     photoPreview.style.backgroundImage = photoForm.style.backgroundImage;
   }

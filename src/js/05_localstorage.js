@@ -8,9 +8,7 @@ if(localStorageData)
   emailForm.value=data.email;
   phoneForm.value=data.phone;
 
-  const ruta= './assets/images/default.png';
-
-  if (data.photo===ruta) photoForm.style.backgroundImage='';
+  if (data.photo===pathDefault) photoForm.style.backgroundImage='';
   else photoForm.style.backgroundImage=`url(${data.photo})`;
 
   photoPreview.style.backgroundImage=`url(${data.photo})`;
