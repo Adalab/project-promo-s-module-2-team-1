@@ -152,7 +152,10 @@ function handleResetClick(ev) {
   phoneForm.value = data.phone;
   linkedinForm.value = data.linkedin;
   githubForm.value = data.github;
+  if (data.photo){
   photoForm.style.backgroundImage = `url(${data.photo})`;
+  }
+  else photoForm.style.backgroundImage='';
 
   //propuesta monica:añadí estas dos funciones para cambiar
   //a la paleta1
@@ -190,9 +193,10 @@ function updateForm() {
     linkedinPreviuw.href = 'https://www.' + linkedinForm.value;
     linkedinPreviuw.classList.remove('disabled-link');
   }
- 
+  // const ruta= '../assets/images/default.png';
+  const ruta= './assets/images/default.png';
   if (photoForm.style.backgroundImage === '')
-    photoPreview.style.backgroundImage = '';
+     photoPreview.style.backgroundImage = `url(${ruta})`;
   else {
     photoPreview.style.backgroundImage = photoForm.style.backgroundImage;
   }
