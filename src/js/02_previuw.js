@@ -19,7 +19,7 @@ const color1 = document.querySelector('.js-color1');
 const color2 = document.querySelector('.js-color2');
 const color3 = document.querySelector('.js-color3');
 
-const pathDefault='./assets/images/default.png';
+const pathDefault='./assets/images/avatar.png';
 //hay que cambiar la ruta para que funcione con docs
 // const pathDefault='../images/default.png';
 //importante
@@ -89,9 +89,13 @@ function handleResetClick(ev) {
   //funciones para cambiar a la paleta1
   removeColors();
   addColor('palette1');
+  //ocultar botones
   shareMessage.classList.add('hiddenField');
   twitterButton.classList.add('hiddenField');
   shareUrl.classList.add('hiddenField');
+  //vaciar el contenido del input de tipo file
+  fileField.value='';
+  
   //reseteamos el localstorage y el form
   localStorage.setItem('formData', JSON.stringify(data));
   updateForm();
