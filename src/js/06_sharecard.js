@@ -7,9 +7,9 @@ const twitterButton = document.querySelector('.js-share--button2__twitter');
 
 function checkRequiredFields()
 { 
- let messageError=''; 
+ let messageError='';
  let message='';
-  
+
 if (!nameForm.value){
   message=message +='nombre,';
 }
