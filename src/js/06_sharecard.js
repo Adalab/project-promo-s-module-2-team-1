@@ -4,6 +4,7 @@ const shareMessage = document.querySelector('.js-share--button2__text');
 const shareUrl = document.querySelector('.js-share--button2__nav');
 const twitterButton = document.querySelector('.js-share--button2__twitter');
 
+
 function checkRequiredFields()
 { 
  let messageError=''; 
@@ -17,7 +18,7 @@ if(!jobForm.value)
   message=message +='puesto,';
 }
 
-if(!data.photo)
+if(data.photo === pathDefault )
 {
   message=message +='foto,';
 }
