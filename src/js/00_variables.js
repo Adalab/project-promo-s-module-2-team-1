@@ -19,6 +19,7 @@ const linkelinPreview = document.querySelector('.js-card-linkedin');
 const linePreview = document.querySelector('.js-profileText');
 const borderPreview = document.querySelector('.js-border');
 const containerColor = document.querySelector('.js-containerColor');
+const backColor = document.querySelector ('.js-main_card');
 
 let data = {
   palette: '',

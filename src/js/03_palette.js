@@ -23,6 +23,9 @@ function removeColors(){
   borderPreview.classList.remove ('palette1');
   borderPreview.classList.remove ('palette2');
   borderPreview.classList.remove ('palette3');
+  backColor.classList.remove ('palette1');
+  backColor.classList.remove ('palette2');
+  backColor.classList.remove ('palette3');
 }
  //monica:cree la funcción addColor()
 function addColor(palette){
@@ -33,6 +36,7 @@ function addColor(palette){
   linkelinPreview.classList.add (palette);
   linePreview.classList.add (palette);
   borderPreview.classList.add (palette);
+  backColor.classList.add (palette);
 }
 function handleClick(event) {
   // event.preventDefault(); //nos impide seleccionar el radio button

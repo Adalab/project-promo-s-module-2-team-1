@@ -12,6 +12,16 @@
   background-repeat: no-repeat;
   padding-bottom: 10px;
   background-position-x: right;
+        &.palette1 {
+      background-image: url('../images/fondoverde.jpg');
+      }
+        &.palette2 {
+        background-image: url('../images/fondorojo.jpg');
+      }
+      &.palette3 {
+        background-image: url('../images/fondolila.jpg');
+      }
+  }
   
 
   @media (min-width: 768px) {
@@ -24,7 +34,7 @@
   @media (min-width: 1200px) {
     // height: 950px;
   }
-}
+
 .reset {
   width: 85px;
   height: 30px;
