@@ -16,7 +16,7 @@
   }
 
   &--section1__title {
-    color: $dull-orange;
+    color:#994294 ;
     font-size: 19.2px;
     height: 24px;
     font-family: $font-merry;
@@ -52,7 +52,7 @@
     justify-content: space-around;
     align-items: center;
     margin: 20px 28px 17.8px 28px;
-    border: solid 2px #f1dacc;
+    border: solid 2px #f1beee;
     height: 74px;
     border-radius: 4px;
     padding: 15px;
@@ -71,7 +71,7 @@
       align-items: center;
 
       &__icon {
-        color: $dull-orange;
+        color: #994294;
         height: 26px;
         width: 32px;
         font-size: 22.4px;
@@ -109,7 +109,7 @@
       font-family: $font-open;
       font-weight: 600;
       font-size: 16px;
-      background-color: $dirty-blue;
+      background-color: #FBC536;
       border: none;
       border-radius: 21px;
       width: 129px;
