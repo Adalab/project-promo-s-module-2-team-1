@@ -19,9 +19,9 @@ const color1 = document.querySelector('.js-color1');
 const color2 = document.querySelector('.js-color2');
 const color3 = document.querySelector('.js-color3');
 
-const pathDefault='./assets/images/avatar.png';
+//const pathDefault='./assets/images/avatar.png';
 //hay que cambiar la ruta para que funcione con docs
-// const pathDefault='../images/default.png';
+const pathDefault='../images/avatar.png';
 //importante
 nameForm.addEventListener('keyup', handleInputName);
 function handleInputName() {
