@@ -7,8 +7,12 @@ const twitterButton = document.querySelector('.js-share--button2__twitter');
 
 function checkRequiredFields()
 { 
- let messageError='';
- let message='';
+  let messageError='';
+  let message='';
+//El campo data.palette se actualiza al seleccionar el check button
+//Si no se selecciona nunca, el data.palette está vacío. Entonces actualizamos
+//el data.palette=1 por ser la paleta por defecto.
+if (!data.palette) data.palette=1;
 
 if (!nameForm.value){
   message=message +='nombre,';
@@ -35,11 +39,11 @@ if(!linkedinForm.value)
   message=message +='linkedin,';
 }
 if (message){
- const mesaggeInicial='No se ha podido generar la tarjeta. Debe rellenar los campos requeridos: ';
- const messageNew=message.slice(0,-1);
- messageError=mesaggeInicial+messageNew;
+    const mesaggeInicial='No se ha podido generar la tarjeta. Debe rellenar los campos requeridos: ';
+    const messageNew=message.slice(0,-1);
+    messageError=mesaggeInicial+messageNew;
 }
-return messageError;
+  return messageError;
 }
 
 function handleClickShare(event) {
@@ -47,17 +51,17 @@ function handleClickShare(event) {
   console.log('Entra en share');
   console.log(data);
   let messageCheck=checkRequiredFields();
-  
+
   if(messageCheck.length===0){
     fetch('https://dev.adalab.es/api/card/', {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((data) => {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
         if (data.success) {
           shareMessage.innerHTML = 'La tarjeta ha sido creada:';
           shareUrl.innerHTML = data.cardURL;
@@ -70,11 +74,11 @@ function handleClickShare(event) {
         }
       });
     shareMessage.classList.remove('hiddenField');
-}
-shareMessage.innerHTML = messageCheck;
-shareMessage.classList.remove('hiddenField');
-twitterButton.classList.add('hiddenField');
-shareUrl.classList.add('hiddenField');
+  }
+  shareMessage.innerHTML = messageCheck;
+  shareMessage.classList.remove('hiddenField');
+  twitterButton.classList.add('hiddenField');
+  shareUrl.classList.add('hiddenField');
 }
 
 shareButton.addEventListener('click', handleClickShare);
