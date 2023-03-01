@@ -77,9 +77,9 @@ npm run docs
 Sube a tu repo, en el apartado de GitHub Pages, la carpeta `docs/` que se te acaba de generar.
 
 ## Autores ✒️
-- [Irene ](https://github.com/) 
-- [Laura](https://github.com/) 
-- [Natalia Puerta](https://github.com/
+- [Irene Mezquita](https://github.com/irenemez) 
+- [Laura Moreno](https://github.com/lauramorenochico) 
+- [Natalia Puerta](https://github.com/NataliaPuertac)
 - [Mónica Saborido](https://github.com/sabfiamo)
 
 
