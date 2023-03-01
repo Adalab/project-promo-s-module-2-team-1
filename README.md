@@ -7,15 +7,16 @@
 En este proyecto hemos realizado una aplicación web que permite crear una tarjeta de visita personalizada. En la página web podemos introducir nuestros datos profesionales y obtener una vista maquetada con esta información. 
 Este Kit incluye un motor de plantillas HTML, el preprocesador SASS y un servidor local y muchas cosas más. El Kit nos ayuda a trabajar más cómodamente, nos automatiza tareas.
 
-##¿Qué partes la conforman?
+## **¿Qué partes la conforman?**
 
 El proyecto consta de 2 páginas:
-Una página landing de bienvenida.
-Una página con la aplicación de crear tarjetas.
+- Una página landing de bienvenida.
+- Una página con la aplicación de crear tarjetas.
+
 La aplicación funciona siguiendo estos pasos:
-1 - Permitir al usuario elegir el estilo de la tarjeta, eligiendo paleta de colores.
-2 - Permitir al usuario que, mediante la introducción de información en un formulario, este texto se muestre maquetado automáticamente en un cuadro similar a una tarjeta de visita, que será la muestra del resultado final.
-3 - Permitir que el usuario pueda crear una web con su tarjeta y compartirla por Twitter.
+1. Permitir al usuario elegir el estilo de la tarjeta, eligiendo paleta de colores.
+1. Permitir al usuario que, mediante la introducción de información en un formulario, este texto se muestre maquetado automáticamente en un cuadro similar a una tarjeta de visita, que será la muestra del resultado final.
+1. Permitir que el usuario pueda crear una web con su tarjeta y compartirla por Twitter.
 
 
 ## Construido con 🛠️
@@ -24,22 +25,15 @@ La aplicación funciona siguiendo estos pasos:
 - **SASS** - Preprocesador CSS
 - **AJAX / APIS** - Peticiones al servidor
 - **NPM** - Gestor de dependencias
-- **ADALAB WEB STARTER KIT** (_plantilla de proyecto con funcionalidades preinstaladas y preconfiguradas_).
-
-En el desarrollo de esta aplicación web hemos usado las siguientes tecnologías:
-Uso avanzado de formularios HTML.
-Maquetación usando CSS avanzado, como flex y grid.
-Uso de mediaqueries para que el diseño sea adaptable al dispositivo usando la estrategia mobile first.
-Gestión de eventos en el navegador.
-Acceso y envío de datos a un servidor.
-Almacenamiento en local usando LocalStorage.
-Uso de git para el control de versiones del proyecto.
-
+- **LocalStorage** - Alamcenamiento local
+- **Git** - Control de verisones
 
 ## Objectivos
-
+- Uso avanzado de formularios HTML.
+- Maquetación usando CSS avanzado, como flex y grid.
 - Usar SASS
 - Trabajar con arrays y objetos
+- Uso de mediaqueries para que el diseño sea adaptable al dispositivo usando la estrategia mobile first
 - Usar funciones para estructurar el código
 - Modificar la información del DOM para añadir contenido dinámico
 - Escuchar eventos del DOM
