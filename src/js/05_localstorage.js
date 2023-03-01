@@ -7,6 +7,8 @@ if(localStorageData)
   nameForm.value = data.name;
   emailForm.value=data.email;
   phoneForm.value=data.phone;
+  
+  if (!data.photo) data.photo=pathDefault;
 
   if (data.photo===pathDefault) photoForm.style.backgroundImage='';
   else photoForm.style.backgroundImage=`url(${data.photo})`;
